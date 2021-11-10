@@ -6,20 +6,20 @@ const { clientId, guildId, token } = require('./config.json');
 const commands = [
 	new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
 	new SlashCommandBuilder().setName('action')
-		.setName('action')
-		.setDescription('Starts an action!')
+		.setName('activity')
+		.setDescription('Starts an activity!')
 		.addStringOption(option =>
 			option.setName('type')
-				.setDescription('which action you would like to start')
+				.setDescription('which activity you would like to start')
 				.setRequired(true)
-					.addChoice('Checkers', 'action_Checkers_in_the_Park')
-					.addChoice('Chess', 'action_Chess_in_the_Park')
-					.addChoice('DoodleCrew', 'action_Doodle')
-					.addChoice('LetterTile', 'action_Letter_Tile')
-					.addChoice('Poker', 'action_Poker_Night')
-					.addChoice('Spellcast', 'action_Spell_Cast')
-					.addChoice('WatchTogether', 'action_Watch_Together')
-					.addChoice('WordSnacks', 'action_Word_Snacks')
+					.addChoice('Poker', 'activity_Poker_Night')
+					.addChoice('Betrayal', 'activity_Betrayal')
+					.addChoice('YoutubeTogether', 'activity_Youtube_Together')
+					.addChoice('Fishington', 'activity_Fishington')
+					.addChoice('Chess', 'activity_Chess_in_the_Park')
+					.addChoice('DoodleCrew', 'activity_Doodle_Crew')
+					.addChoice('WordSnacks', 'activity_Word_Snacks')
+					.addChoice('LetterTile', 'activity_Letter_Tile')
 			)
 ]
 	.map(command => command.toJSON());
