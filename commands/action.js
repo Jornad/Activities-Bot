@@ -1,10 +1,13 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
+var game = 'GAME_HERE';
+var link = 'LINK_HERE'
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('ping')
-		.setDescription('Replies with Pong!'),
+		.setName('action')
+		.setDescription('Starts an action!'),
 	async execute(interaction) {
-		await interaction.reply('Pong!');
+        let game = interaction.options.getString('type').slice(7).replace('_', ' ');
+		await interaction.reply('Click this link to start ' + game + '! ' + link);
 	},
 };

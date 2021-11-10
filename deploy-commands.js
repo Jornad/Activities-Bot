@@ -7,19 +7,19 @@ const commands = [
 	new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
 	new SlashCommandBuilder().setName('action')
 		.setName('action')
-		.setDescription('Starts an action')
+		.setDescription('Starts an action!')
 		.addStringOption(option =>
 			option.setName('type')
 				.setDescription('which action you would like to start')
 				.setRequired(true)
-					.addChoice('Checkers', 'action_checkers')
-					.addChoice('Chess', 'action_chess')
-					.addChoice('DoodleCrew', 'action_doodle')
-					.addChoice('LetterTile', 'action_lettertile')
-					.addChoice('Poker', 'action_poker')
-					.addChoice('Spellcast', 'action_spellcast')
-					.addChoice('WatchTogether', 'action_watchtogether')
-					.addChoice('WordSnacks', 'action_wordsnacks')
+					.addChoice('Checkers', 'action_Checkers_in_the_Park')
+					.addChoice('Chess', 'action_Chess_in_the_Park')
+					.addChoice('DoodleCrew', 'action_Doodle')
+					.addChoice('LetterTile', 'action_Letter_Tile')
+					.addChoice('Poker', 'action_Poker_Night')
+					.addChoice('Spellcast', 'action_Spell_Cast')
+					.addChoice('WatchTogether', 'action_Watch_Together')
+					.addChoice('WordSnacks', 'action_Word_Snacks')
 			)
 ]
 	.map(command => command.toJSON());
